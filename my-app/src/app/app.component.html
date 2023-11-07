@@ -1,0 +1,26 @@
+<div class="topnav">
+    <div class="derecha">
+        <label *ngIf="perfil" for="btn-menu" class="fa-solid fa-comments" style="color: #bd0000;"></label>
+        <a *ngIf="perfil" routerLink="home">Home</a>
+        <a routerLink="quienSoy">Yo</a>
+    </div>
+    <div class="izquierda" *ngIf="perfil; else elseBlock">
+        <a class="perfil" (click)="logOut()">log out</a>
+    </div>
+    <ng-template #elseBlock>
+        <div class="izquierda">
+            <a routerLink="login">Login</a>
+            <a routerLink="registro">registrarse</a>
+        </div>
+    </ng-template>
+
+    <input type="checkbox" id="btn-menu">
+    
+    <div class="container-menu">
+	    <div class="cont-menu">
+            <app-chat></app-chat>
+		    <label class="cerrar" for="btn-menu">✖️</label>
+	    </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

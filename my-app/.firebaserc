@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "sala-de-juegos-2a66d"
+  },
+  "targets": {
+    "sala-de-juegos-2a66d": {
+      "hosting": {
+        "my-app": [
+          "sala-de-juegos-2a66d"
+        ]
+      }
+    }
+  }
+}

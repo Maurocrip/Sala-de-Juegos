@@ -1,0 +1,21 @@
+<div class="conteiner">
+    <div class="prerguntados" *ngIf="perdio; else elseBlock">
+        <label>PREGUNTA:</label>
+        <label>{{pregunta}}</label>
+        <div class="opciones">
+            <li class="opcion1" (click)="Verificar(opciones[0])">{{opciones[0]}}</li>
+            <li class="opcion2" (click)="Verificar(opciones[1])">{{opciones[1]}}</li>
+            <li class="opcion3" (click)="Verificar(opciones[2])">{{opciones[2]}}</li>
+            <li class="opcion4" (click)="Verificar(opciones[3])">{{opciones[3]}}</li>
+        </div>
+        <label >Puntos: {{puntos}}</label>
+    </div>
+    <ng-template #elseBlock>
+        <div class="prerguntados" >
+            <H1>HAS PERDIDO!!</H1>
+            <label>La respuesta correcta era: {{respustaCorrecta}}</label>
+            <button (click)="Reintentar()">Reintentar</button>
+            <label >Puntos: {{puntos}}</label>
+        </div>
+    </ng-template>
+</div>

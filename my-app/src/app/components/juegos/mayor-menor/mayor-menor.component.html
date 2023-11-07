@@ -1,0 +1,20 @@
+<div class="mesa">
+    <div class="center">
+        <input *ngIf="mostrar; else elseBlock" type="button" (click)="this.Empezar()" [ngModel]="boton">
+        <div>
+            <img [src]="this.cartaActual.foto" alt="">
+            <img [src]="this.fotoAtras" alt="">
+        </div>
+        <label #resultado> {{mensaje}} </label>
+        <br>
+        <label>LLevas {{puntos}} puntos</label>
+    
+        <ng-template #elseBlock>
+            <div>
+                <label type="text">La carta siguiente sera:</label>
+                <input type="button" value="Mayor" (click)="Mayor()">
+                <input type="button" value="Menor" (click)="Menor()">
+            </div>
+        </ng-template>
+    </div>
+</div>

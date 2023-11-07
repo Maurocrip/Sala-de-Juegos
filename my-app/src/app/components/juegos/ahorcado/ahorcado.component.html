@@ -1,0 +1,103 @@
+<div class="general center">
+  <div class="ahorcado ">
+    <img [src]="foto">
+    <label id="palabra" #palabra class = "palabra">{{palabraJuego}}</label>
+    <label class = "palabra">llevas: {{puntos}} puntos</label>
+  </div>
+  <div class="teclado " #teclado *ngIf="tecladoB; else elseBlock">
+      <div class="bloque">
+        <div class="fila-teclas">
+          <label class="tecla tecla-letra" (click)="letra('q')">
+            <span>q</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('w')">
+            <span>w</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('e')">
+            <span>e</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('r')">
+            <span>r</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('t')">
+            <span>t</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('y')">
+            <span>y</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('u')">
+            <span>u</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('i')">
+            <span>i</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('o')">
+            <span>o</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('p')">
+            <span>p</span>
+          </label>
+        </div>
+        <div class="fila-teclas">
+          <label class="tecla tecla-letra" (click)="letra('a')">
+            <span>a</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('s')">
+            <span>s</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('d')">
+            <span>d</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('f')">
+            <span>f</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('g')">
+            <span>g</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('h')">
+            <span>h</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('j')">
+            <span>j</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('k')">
+            <span>k</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('l')">
+            <span>l</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('ñ')">
+            <span>ñ</span>
+          </label>
+        </div>
+        <div class="fila-teclas">
+          <label class="tecla tecla-letra" (click)="letra('z')">
+            <span>z</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('x')">
+            <span>x</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('c')">
+            <span>c</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('v')">
+            <span>v</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('b')">
+            <span>b</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('n')">
+            <span>n</span>
+          </label>
+          <label class="tecla tecla-letra" (click)="letra('m')">
+            <span>m</span>
+          </label>
+        </div>
+      </div>
+  </div>
+  <ng-template #elseBlock>
+    <div>
+        <input type="button" class="" [ngModel]="boton" (click)="Reintentar()">
+    </div>
+</ng-template>
+</div>

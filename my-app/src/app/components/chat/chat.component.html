@@ -1,0 +1,19 @@
+<h3>Chat en linea</h3>
+<div class="Comunicacion">
+    <div class="mensaje" #chat>
+        <ul *ngFor="let mensaje of arrayMensajes">
+            <li class="chat suyo" *ngIf="mensaje.Usuario != this.global.usuarioNombre; else elseBlock">
+                <p>{{mensaje.Usuario}}:<br>{{mensaje.Mensaje}}<br>{{mensaje.Fecha}}</p>
+            </li> 
+            <ng-template #elseBlock>
+                <li class="chat mio">
+                    <p>You:<br>{{mensaje.Mensaje}}<br>{{mensaje.Fecha}}</p>
+                </li>     
+            </ng-template>
+        </ul>
+    </div>
+    <div class="abajo">
+        <input id="escribrir" type="text" placeholder="Escribi algo" [(ngModel)]="textBox">
+        <button (click)="verifica()">Enviar</button>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.mesa{
+    background-image: url("../../../../assets/pokerFondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 949px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.center
+{
+    background-color: rgba(219, 216, 216, 0.442);
+    padding: 10px 10px;
+}
+label
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    margin: 5px;
+}

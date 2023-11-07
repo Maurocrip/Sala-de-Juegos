@@ -1,0 +1,29 @@
+
+<div class="mesa">
+    <div class="center">
+        <input *ngIf="mostrar; else elseBlock" type="button" (click)="this.EmpezarJuego()" [ngModel]="boton">
+        <div class="cartas">
+            <label>Tus cartas</label>
+            <br>
+            <img *ngFor="let carta of arrayCartasMia" [src]="carta.foto">
+        </div>
+        <div>
+            <label>Cartas del contricante</label>
+            <br>
+            <img *ngFor="let carta of arrayCartasPc" [src]="carta.foto">
+        </div>
+        <label #resultado> {{mensaje}} </label>
+        <br>
+        
+        <ng-template #elseBlock>
+            <div  *ngIf="terminar">
+                <input type="button" value="Plantarse" (click)="Plantarse()">
+                <input type="button" value="Pedir" (click)="Pedir()">
+            </div>
+        </ng-template>
+        <div style="display: flex; justify-content: space-between;">
+            <label>LLevas {{puntos}} puntos</label>
+            <input *ngIf="terminar == false" type="button" value="Continuar" (click)="Continuar()">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="fondo">
+    <div *ngIf="perfil">
+        <h6 class="tiempo">Inicio de sesion: {{tiempoDeLogue}}</h6>
+        <h6 class="usuario">{{usuario}}</h6>
+    </div>
+
+    <div class="container-login100">
+        <div class="card-group flex">
+            <div class=" gamePointer" *ngFor="let juego of juegos" [routerLink]=juego.path>
+              <h5 class="card-title">{{juego.name}}</h5>
+              <img style="height: 300px; width: 400px;" [src]="juego.image" class="card-img-top gamePhoto" alt="...">
+              <div class="card-body">
+                <p class="card-text">{{juego.description}}
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+  
+  

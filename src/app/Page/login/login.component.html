@@ -1,0 +1,47 @@
+<div class="limiter">
+  <div class="container-login100" style="background-image: url('assets/gaming.png');">
+    <div class="wrap-login100">
+      <span class="login100-form-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="#99AAB5" d="M16 9h4v17h-4z"/><path fill="#DA2F47" d="M10 24.5A1.5 1.5 0 0 1 8.5 26h-3a1.5 1.5 0 0 1 0-3h3a1.5 1.5 0 0 1 1.5 1.5"/><path fill="#31373D" d="M34 33a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2z"/><path fill="#31373D" d="M10 34.5A1.5 1.5 0 0 1 8.5 36h-3a1.5 1.5 0 1 1 0-3h3a1.5 1.5 0 0 1 1.5 1.5m22 0a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1 0-3h3a1.5 1.5 0 0 1 1.5 1.5"/><circle cx="18" cy="7" r="5" fill="#DA2F47"/><path fill="#31373D" d="M25 26a2 2 0 0 1-2 2H13a2 2 0 0 1-2-2v-1c0-1.104 3.896-6 5-6h4c1.104 0 5 4.896 5 6z"/><path fill="#66757F" d="M33 28a1 1 0 0 1-1 1H4a1 1 0 1 1 0-2h28a1 1 0 0 1 1 1"/></svg>
+      </span>
+      
+      <span class="login100-form-title">
+        Log in
+      </span>
+      <form class="login100-form" [formGroup]="grupo">
+        <div class="">
+          <div class="formulario-div-imputs">
+            <div class="wrap-input100">
+              <input class="input" type="text" name="Username" formControlName="email" placeholder="Mail" [(ngModel)]="email">
+            </div>
+            <small *ngIf=" grupo.controls['email'].errors?.['required'] && grupo.controls['email'].touched " style="color: red;">
+              Falta el email.
+            </small>
+          </div>
+
+          <div class="formulario-div-imputs">
+            <div class="wrap-input100">
+              <input class="input" type="password" name="Password"  formControlName="pasword" placeholder="Password" [(ngModel)]="pasword">
+            </div>
+            <small *ngIf=" grupo.controls['pasword'].errors?.['required'] &&  grupo.controls['pasword'].touched " style="color: red;">
+              Falta una contraseña.
+            </small>
+          </div>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <div class="usuairios-botones">
+          @for (item of arrayOpciones; track $index) 
+          {
+            <button class="login100-form-btn" (click)="Completar(item.Email, item.Password)"> {{item.Nombre}}</button>
+          }
+        </div>
+          <div class="login-boton">
+            <button class="boton" (click)="LogIn()"> Login </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

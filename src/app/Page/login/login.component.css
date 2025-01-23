@@ -1,0 +1,214 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+}
+
+/* clases usadas */
+
+.limiter {
+	width: 100%;
+  }
+
+  .container-login100 {
+	width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1; 
+  }
+  
+  .container-login100::before {
+	content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 65%);
+  }
+
+  
+.wrap-login100 {
+	width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px 55px 37px 55px;
+    background: #9152f8;
+  }
+  
+  .login100-form-logo {
+	font-size: 60px; 
+	color: #333333;
+  
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 0 auto;
+  }
+
+  .login100-form-title {
+	font-size: 35px;
+	color: #fff;
+	line-height: 1.2;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 34px;
+	padding-top: 27px;
+	display: block;
+  }
+
+  .login100-form {
+	width: 100%;
+  }
+
+  .formulario-div-imputs
+{
+	padding-bottom: 20px;
+}
+
+.wrap-input100 {
+	width: 100%;
+	position: relative;
+	border-bottom: 2px solid rgba(255,255,255,0.24);
+  }
+  
+
+  /*------------------------------------------------------------------
+[ Input ]*/
+
+input::placeholder {
+	color:#c7c7c7;
+  }
+  .input{
+	color: #fff;
+    height: 45px;
+	font-size: larger;
+    background: transparent;
+    padding: 0 0px 0 5px;
+  }
+
+  .container-login100-form-btn {
+	width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.usuairios-botones
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------
+[ Button ]*/
+
+.login100-form-btn {
+
+	padding: 0 20px;
+    min-width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(bottom, #7579ff, #b224ef);
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s;
+}
+
+.login100-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 1;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  background-color: #00f7ff;
+  transition: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.login100-form-btn:hover:before {
+  opacity: 0;
+}
+
+
+.login-boton
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-boton .boton{
+
+	min-width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+
+.login-boton .boton:hover{
+	background-color: #00ffff;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+ input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+
+input::-webkit-input-placeholder { color: #fff;}
+input:-moz-placeholder { color: #fff;}
+input::-moz-placeholder { color: #fff;}
+input:-ms-input-placeholder { color: #fff;}
+
+
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+

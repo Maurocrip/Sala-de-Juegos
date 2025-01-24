@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "app-para-subir",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
